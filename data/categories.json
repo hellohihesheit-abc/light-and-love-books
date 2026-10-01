@@ -1,0 +1,32 @@
+[
+  {
+    "id": "christian-inspiration",
+    "label": "Christian Inspiration",
+    "count": 10
+  },
+  {
+    "id": "mindfulness-peace",
+    "label": "Mindfulness & Peace",
+    "count": 7
+  },
+  {
+    "id": "gratitude-joy",
+    "label": "Gratitude & Joy",
+    "count": 4
+  },
+  {
+    "id": "love-relationships",
+    "label": "Love & Relationships",
+    "count": 5
+  },
+  {
+    "id": "art-watercolor",
+    "label": "Art & Colouring",
+    "count": 4
+  },
+  {
+    "id": "encouragement",
+    "label": "Encouragement",
+    "count": 2
+  }
+]
