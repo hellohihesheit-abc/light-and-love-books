@@ -153,8 +153,8 @@
     img.src = book.cover;
     img.alt = "";
     img.loading = "lazy";
-    img.width = 320;
-    img.height = 480;
+    img.width = 1000;
+    img.height = 1000;
     coverWrap.appendChild(img);
 
     const body = document.createElement("div");
