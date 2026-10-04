@@ -23,7 +23,7 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; font-size: 120%; }
+html { scroll-behavior: smooth; font-size: 200%; }
 
 body {
   margin: 0;
