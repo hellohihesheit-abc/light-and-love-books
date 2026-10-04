@@ -703,4 +703,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   height: 100%;
   border: 0;
 }
-.music-cta { text-align: center; margin: 1.4rem 0 0; }
+.music-grid--single { max-width: 820px; margin-inline: auto; }
+.music-now { text-align: center; font-family: var(--serif); font-size: 1.35rem; margin: 0 0 0.8rem; }
+.music-cta { text-align: center; margin: 1.4rem 0 0; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
