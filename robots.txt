@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hellohihesheit-abc.github.io/light-and-love-books/sitemap.xml

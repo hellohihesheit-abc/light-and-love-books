@@ -151,7 +151,7 @@
     const img = document.createElement("img");
     img.className = "book-cover";
     img.src = book.cover;
-    img.alt = "";
+    img.alt = `${book.title} — book cover by Light & Love (MW)`;
     img.loading = "lazy";
     img.width = 1000;
     img.height = 1000;
