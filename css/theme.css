@@ -1,0 +1,128 @@
+/* ===== Floral blush & gold theme (layer over styles.css) ===== */
+:root{
+  --cream:#fdf8f3; --cream-deep:#f7ece6; --paper:#fffaf6; --paper-edge:#efd9cf;
+  --ink:#3a2a2c; --ink-soft:#6a5256; --muted:#9a8287;
+  --rose:#d9a5a9; --rose-deep:#b46b78; --blush:#f6dfe0; --gold:#c9a25e; --gold-soft:#e8d3a6;
+  --sage:#9aae98; --sage-deep:#7a8f7a;
+  --shadow:0 22px 60px rgba(150,90,100,.14); --radius:22px;
+  --script:"Great Vibes", cursive;
+  --flower:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23c9a25e' stroke-width='1.4' opacity='.75'%3E%3Cpath d='M20 190 C60 140 90 110 150 40'/%3E%3Cpath d='M70 128 c-18 -6 -30 -22 -28 -40 c16 6 26 22 28 40z' fill='%23e8c7c9' fill-opacity='.5'/%3E%3Cpath d='M110 82 c18 2 32 14 36 30 c-18 -2 -32 -14 -36 -30z' fill='%23e8c7c9' fill-opacity='.5'/%3E%3C/g%3E%3Cg transform='translate(150 40)'%3E%3Cg fill='%23efc3c6' stroke='%23c98a93' stroke-width='1'%3E%3Cellipse rx='9' ry='17' cy='-14'/%3E%3Cellipse rx='9' ry='17' cy='-14' transform='rotate(72)'/%3E%3Cellipse rx='9' ry='17' cy='-14' transform='rotate(144)'/%3E%3Cellipse rx='9' ry='17' cy='-14' transform='rotate(216)'/%3E%3Cellipse rx='9' ry='17' cy='-14' transform='rotate(288)'/%3E%3C/g%3E%3Ccircle r='6' fill='%23c9a25e'/%3E%3C/g%3E%3Cg transform='translate(48 98) scale(.6)'%3E%3Cg fill='%23f6dfe0' stroke='%23d9a5a9'%3E%3Cellipse rx='9' ry='17' cy='-14'/%3E%3Cellipse rx='9' ry='17' cy='-14' transform='rotate(72)'/%3E%3Cellipse rx='9' ry='17' cy='-14' transform='rotate(144)'/%3E%3Cellipse rx='9' ry='17' cy='-14' transform='rotate(216)'/%3E%3Cellipse rx='9' ry='17' cy='-14' transform='rotate(288)'/%3E%3C/g%3E%3Ccircle r='6' fill='%23e8d3a6'/%3E%3C/g%3E%3C/svg%3E");
+  --divider:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 24'%3E%3Cg stroke='%23c9a25e' stroke-width='1' fill='none'%3E%3Cpath d='M0 12 H92'/%3E%3Cpath d='M148 12 H240'/%3E%3Cpath d='M100 12 c6 -8 14 -8 20 0 c6 8 14 8 20 0'/%3E%3C/g%3E%3Cg fill='%23d9a5a9'%3E%3Ccircle cx='120' cy='12' r='3.2'/%3E%3Ccircle cx='96' cy='12' r='1.8'/%3E%3Ccircle cx='144' cy='12' r='1.8'/%3E%3C/g%3E%3C/svg%3E");
+}
+body{
+  background:
+    radial-gradient(900px 520px at 0% 0%, rgba(239,195,198,.35), transparent 60%),
+    radial-gradient(800px 500px at 100% 10%, rgba(232,211,166,.28), transparent 55%),
+    linear-gradient(180deg,#fdf6f2 0%,var(--cream) 45%,#fbf1ec 100%);
+}
+h1,h2,h3,.brand-text,.footer-brand{font-family:var(--serif);letter-spacing:.01em}
+.site-header{background:rgba(253,246,242,.9);border-bottom:1px solid rgba(201,162,94,.35)}
+.brand-name{color:var(--rose-deep)}
+.nav a:hover{color:var(--rose-deep)}
+.lang-btn[aria-pressed="true"]{background:linear-gradient(135deg,#fff,#fbe9e9);color:var(--rose-deep);box-shadow:0 0 0 1px var(--gold-soft)}
+
+.ornament{width:220px;height:22px;margin:0 auto .6rem;background:var(--divider) center/contain no-repeat;font-size:0}
+
+/* Hero */
+.hero{padding:4.5rem 0 3.5rem;overflow:hidden}
+.flora{position:absolute;width:min(42vw,420px);aspect-ratio:1;background:var(--flower) center/contain no-repeat;pointer-events:none;opacity:.9}
+.flora-tl{left:-40px;top:10px;transform:scaleX(-1) rotate(-8deg)}
+.flora-br{right:-40px;bottom:-10px;transform:rotate(180deg) scaleX(-1)}
+.hero-inner{position:relative;max-width:48rem;padding:2.75rem 2rem 3rem;
+  background:linear-gradient(180deg,rgba(255,250,246,.96),rgba(253,240,238,.88));
+  border:1px solid var(--gold-soft);border-radius:200px 200px 32px 32px;
+  box-shadow:0 0 0 8px rgba(255,250,246,.7),0 0 0 9px rgba(201,162,94,.35),var(--shadow)}
+.script-accent{font-family:var(--script);font-size:2.2rem;color:var(--gold);margin:0;line-height:1}
+.eyebrow{color:var(--rose-deep);letter-spacing:.22em}
+.hero h1{font-size:clamp(3rem,7vw,4.8rem);font-weight:600;
+  background:linear-gradient(120deg,#9c5463,#c98a93 45%,#b8914a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{color:var(--gold);font-size:clamp(1.4rem,3vw,1.9rem)}
+
+/* Buttons */
+.btn-primary{background:linear-gradient(135deg,#c47d89,#a95c6b)!important;color:#fff!important;border:1px solid #a95c6b!important;box-shadow:0 10px 24px rgba(169,92,107,.25)}
+.btn-primary:hover{filter:brightness(1.06)}
+.btn-secondary{background:#fffaf6!important;color:var(--rose-deep)!important;border:1px solid var(--gold)!important}
+
+/* Sections */
+.section-header h2{font-size:clamp(2.1rem,4vw,2.9rem);color:#5a3a40}
+.shelf-label{color:var(--gold)!important}
+.section-paper{background:linear-gradient(180deg,#fffaf6,#fdf0ee);border-block:1px solid var(--gold-soft)}
+.section-alt{background:rgba(253,240,238,.55);border-block:1px solid var(--gold-soft)}
+.section-prayer{position:relative;background:
+  radial-gradient(600px 300px at 50% 0%,rgba(232,211,166,.35),transparent 70%),
+  linear-gradient(180deg,#fdf6f0,#fbeceb);border-block:1px solid var(--gold-soft);overflow:hidden}
+.section-prayer::before,.section-prayer::after{content:"";position:absolute;width:260px;aspect-ratio:1;background:var(--flower) center/contain no-repeat;opacity:.55;pointer-events:none}
+.section-prayer::before{left:-60px;top:-30px;transform:scaleX(-1)}
+.section-prayer::after{right:-60px;bottom:-40px;transform:rotate(180deg)}
+.section-prayer .container{position:relative;z-index:1}
+.music-frame{border-radius:20px;overflow:hidden;border:1px solid var(--gold-soft);box-shadow:0 0 0 6px #fffaf6,var(--shadow)}
+.prayer-frame{aspect-ratio:16/9;max-width:900px;margin-inline:auto}
+.prayer-frame iframe{width:100%;height:100%;border:0;display:block}
+
+/* Cards */
+.benefit-card,.promo-card,.book-card,.featured-card,.author-card,.cta-band{border-color:var(--gold-soft)!important}
+.book-card,.featured-card{transition:transform .25s ease,box-shadow .25s ease}
+.book-card:hover,.featured-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(169,92,107,.18)}
+.author-avatar{background:radial-gradient(circle at 30% 30%,#fbe2e3,#e7b9be)!important;color:#8e4b59!important;box-shadow:0 0 0 4px #fffaf6,0 0 0 5px var(--gold)}
+.chip[aria-pressed="true"]{background:var(--blush)!important;border-color:var(--rose)!important;color:var(--rose-deep)!important}
+.cta-band{background:linear-gradient(135deg,#fbe7e7,#fdf3e6)!important;position:relative;overflow:hidden}
+.site-footer{background:linear-gradient(180deg,#f8e6e4,#f1d8d6);border-top:1px solid var(--gold-soft)}
+.footer-brand{color:var(--rose-deep)}
+
+@media (max-width:640px){
+  .hero{padding:2.5rem 0 2rem}
+  .hero-inner{border-radius:120px 120px 24px 24px;padding:2.25rem 1.1rem 2.25rem}
+  .flora{width:55vw;opacity:.55}
+  .section-prayer::before,.section-prayer::after{width:150px;opacity:.4}
+}
+
+/* ===== Real flower photos (Pexels, free licence) ===== */
+.hero{background:
+  linear-gradient(180deg,rgba(253,246,242,.55),rgba(253,246,242,.9) 85%,var(--cream)),
+  url("../assets/flowers/roses-hero.webp") center 30%/cover no-repeat}
+.hero .flora{display:none}
+.bouquet{position:absolute;bottom:-20px;width:min(30vw,380px);height:auto;pointer-events:none;z-index:0;opacity:.95}
+.bouquet-l{left:-30px}
+.bouquet-r{right:-30px}
+.hero-inner{z-index:1;background:linear-gradient(180deg,rgba(255,250,246,.93),rgba(253,240,238,.9))}
+.photo-strip{height:140px;background:url("../assets/flowers/roses-strip.webp") center/cover no-repeat;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+  border-block:1px solid var(--gold-soft);opacity:.9}
+.photo-strip--thin{height:70px}
+.photo-strip--fmn{background-image:url("../assets/flowers/forgetmenot-pink.webp");background-position:center 62%}
+.section-prayer{background:
+  linear-gradient(90deg,rgba(253,246,240,.2),rgba(253,246,240,.92) 30%,rgba(253,246,240,.92) 70%,rgba(253,246,240,.2)),
+  url("../assets/flowers/forgetmenot-pink.webp") left center/auto 100% no-repeat,
+  url("../assets/flowers/forgetmenot-vase-pink.webp") right bottom/auto 100% no-repeat,#fbeceb}
+.section-prayer::before,.section-prayer::after{display:none}
+#music{background:
+  linear-gradient(180deg,rgba(255,250,246,.9),rgba(253,240,238,.95)),
+  url("../assets/flowers/roses-hero.webp") center/cover no-repeat}
+@media (max-width:900px){
+  .bouquet{width:34vw;opacity:.6;bottom:auto;top:0}
+}
+@media (max-width:640px){
+  .bouquet{width:42vw;opacity:.45}
+  .photo-strip{height:90px}.photo-strip--thin{height:50px}
+  .section-prayer{background:linear-gradient(180deg,rgba(253,246,240,.82),rgba(253,246,240,.95)),url("../assets/flowers/forgetmenot-pink.webp") center top/cover no-repeat}
+}
+/* fixes */
+.prayer-frame{width:100%}
+.photo-strip--fmn{background-image:url("../assets/flowers/roses-strip.webp");background-position:center 40%}
+.section-prayer{background:
+  url("../assets/flowers/forgetmenot-pink-fade.webp") left -40px center/auto 105% no-repeat,
+  url("../assets/flowers/forgetmenot-vase-pink.webp") right -40px bottom/auto 100% no-repeat,
+  radial-gradient(600px 300px at 50% 0%,rgba(232,211,166,.35),transparent 70%),
+  linear-gradient(180deg,#fdf6f0,#fbeceb)}
+.section-prayer .section-header,.section-prayer .music-now{background:rgba(253,246,240,.78);border-radius:24px;padding:.6rem 1rem;max-width:56rem;margin-inline:auto}
+@media (max-width:640px){
+  .section-prayer{background:url("../assets/flowers/forgetmenot-pink-fade.webp") center top/90% auto no-repeat,linear-gradient(180deg,#fdf6f0,#fbeceb)}
+}
+/* normal elegant sizing */
+html{font-size:100%}
+body{font-size:1.0625rem}
+.hero h1{font-size:clamp(2.3rem,5vw,3.4rem)}
+.script-accent{font-size:1.8rem}
+.section-header h2{font-size:clamp(1.7rem,3vw,2.3rem)}
+.photo-strip{height:110px}.photo-strip--thin{height:56px}
+@media (max-width:640px){.hero h1{font-size:2.2rem}.photo-strip{height:70px}.photo-strip--thin{height:40px}}
