@@ -19,7 +19,7 @@ for b in books:
     short=b['title'].split(':')[0].strip()
     kind={'christian-inspiration':'a Christian gift book for women','mindfulness-peace':'a gentle book of calm reflections','gratitude-joy':'an inspirational gratitude book','love-relationships':'a heartfelt book on love','art-watercolor':'a watercolour art book'}.get(b.get('category'),'an inspirational gift book')
     desc=f"{short} by Light & Love (MW): {kind}. {b.get('format','Paperback')} on Amazon UK & US."
-    if len(desc)<120: desc+=" Bible verses, peace and encouragement for everyday life."
+    if len(desc)<120: desc+=" Bible verses, peace and encouragement."
     desc=desc[:158]
     ld={"@context":"https://schema.org","@type":"Book","name":b['title'],"url":url,
         "image":BASE+b['cover'],"author":{"@type":"Person","name":"Light & Love (MW)","url":BASE},
