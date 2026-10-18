@@ -151,7 +151,7 @@
     const img = document.createElement("img");
     img.className = "book-cover";
     img.src = book.cover;
-    img.alt = `${book.title} — book cover by Light & Love (MW)`;
+    img.alt = `${book.title} — Christian book by Light & Love (MW), cover`;
     img.loading = "lazy";
     img.width = 1000;
     img.height = 1000;
@@ -237,7 +237,7 @@
     if (!book || !modal) return;
     modalAsin = asin;
     $("#modal-cover").src = book.cover;
-    $("#modal-cover").alt = book.title;
+    $("#modal-cover").alt = `Cover of ${book.title} by Light & Love (MW)`;
     $("#modal-title").textContent = book.title;
     $("#modal-blurb").textContent = blurbFor(book);
     $("#modal-chip").textContent = catLabel(book.category);

@@ -16,7 +16,11 @@ urls=[]
 for b in books:
     url=f'{BASE}books/{b["asin"]}.html'; urls.append(url)
     main,links=amz(b)
-    desc=re.sub(r'\s+',' ',b.get('description') or b.get('title'))[:155]
+    short=b['title'].split(':')[0].strip()
+    kind={'christian-inspiration':'a Christian gift book for women','mindfulness-peace':'a gentle book of calm reflections','gratitude-joy':'an inspirational gratitude book','love-relationships':'a heartfelt book on love','art-watercolor':'a watercolour art book'}.get(b.get('category'),'an inspirational gift book')
+    desc=f"{short} by Light & Love (MW): {kind}. {b.get('format','Paperback')} on Amazon UK & US."
+    if len(desc)<120: desc+=" Bible verses, peace and encouragement for everyday life."
+    desc=desc[:158]
     ld={"@context":"https://schema.org","@type":"Book","name":b['title'],"url":url,
         "image":BASE+b['cover'],"author":{"@type":"Person","name":"Light & Love (MW)","url":BASE},
         "description":b.get('description',''),"inLanguage":b.get('language','English'),
@@ -35,7 +39,7 @@ for b in books:
 <script type="application/ld+json">{json.dumps(ld,ensure_ascii=False)}</script></head>
 <body><main style="max-width:860px;margin:2rem auto;padding:1rem">
 <p><a href="../">&larr; All Light &amp; Love books</a></p>
-<h1>{e(b['title'])}</h1><p>by Light &amp; Love (MW)</p>
+<h1>{e(b['title'])}</h1><p>by Light &amp; Love (MW) · Christian books, devotionals &amp; inspirational gifts</p>
 <img src="../{b['cover']}" alt="Cover of {e(b['title'])} by Light &amp; Love (MW)" width="400" loading="lazy" style="max-width:100%;height:auto">
 <p>{e(b.get('description',''))}</p>
 <p>{e(b.get('format',''))}{' · '+str(b['pages'])+' pages' if b.get('pages') else ''}{' · ISBN '+e(b['isbn']) if b.get('isbn') else ''}</p>
