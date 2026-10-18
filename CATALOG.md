@@ -1,6 +1,6 @@
 # Light & Love (MW) — Book Catalog
 
-Total: 32 titles.
+Total: 30 titles.
 
 ## Counts
 
@@ -42,7 +42,6 @@ Total: 32 titles.
 | B0DPWHZSGN | encouragement | Kindle Edition | Rise & Shine: Be Your Best Self: Inspiring Words for Bold Young Hearts |
 | B0DPH9CLHK | encouragement | Kindle Edition | Wisdom in Her Smile: Inspiring Business Girls with Words to Live By |
 | B0DPG4FGCG | love-relationships | Kindle Edition | Whispers of Wisdom: A Journey of Love, Trust, and Connection |
-| B0DP73D5D3 | mindfulness-peace | Kindle Edition | Embrace Life: A Journey of Inspiration, Love, and Inner Strength |
 | B0DNKM9QR3 | christian-inspiration | Paperback | Encouraging Bible Verses for Every Heart: Reflections on God’s Love and Grace |
 | B0DNW9TL4J | mindfulness-peace | Paperback | Cafe with Me: Coffee-Inspired Reflections for Everyday Peace |
 | B0DLX4374Y | christian-inspiration | Paperback | My Daily Journal with HE Words: Perfect for Organizing Your Thoughts And Great for Bible Studies, 120 pages. |
