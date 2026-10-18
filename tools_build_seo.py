@@ -1,5 +1,5 @@
 import json, html, os, re
-BAN={'B0DP36PRG8','B0DPR72ZSM'}
+BAN={'B0DNTQ6FDH','B0DP36PRG8','B0DPR72ZSM'}
 BASE='https://hellohihesheit-abc.github.io/light-and-love-books/'
 books=[b for b in json.load(open('data/books.json')) if b['asin'] not in BAN]
 json.dump(books,open('data/books.json','w'),ensure_ascii=False,indent=2)
