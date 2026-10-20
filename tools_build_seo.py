@@ -45,8 +45,8 @@ for b in books:
 <p>{e(b.get('format',''))}{' · '+str(b['pages'])+' pages' if b.get('pages') else ''}{' · ISBN '+e(b['isbn']) if b.get('isbn') else ''}</p>
 <p>{btns}</p></main></body></html>'''
     open(f'books/{b["asin"]}.html','w').write(page)
-sm=['<?xml version="1.0" encoding="UTF-8"?>','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',f'<url><loc>{BASE}</loc><lastmod>2026-10-18</lastmod><priority>1.0</priority></url>']
-sm+= [f'<url><loc>{u}</loc><lastmod>2026-10-18</lastmod></url>' for u in urls]+['</urlset>']
+sm=['<?xml version="1.0" encoding="UTF-8"?>','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',f'<url><loc>{BASE}</loc><lastmod>2026-10-20</lastmod><priority>1.0</priority></url>']
+sm+= [f'<url><loc>{u}</loc><lastmod>2026-10-20</lastmod></url>' for u in urls]+['</urlset>']
 open('sitemap.xml','w').write('\n'.join(sm))
 # crawlable book links on homepage
 links=''.join(f'<li><a href="books/{b["asin"]}.html">{e(b["title"])}</a></li>' for b in books)

@@ -14,6 +14,7 @@
 
   /* Diverse featured shelf: one standout per category mood */
   const FEATURED_ASINS = [
+    "B0HNFTX8H6", /* NEW: Blessings for Women */
     "B0HG7DLLGH", /* Little Moments of Grace — christian */
     "B0FGTPGKJG", /* Gentle Deer Journal — mindfulness */
     "B0FDWKK89W", /* 5-Minute Gratitude — gratitude */
@@ -161,7 +162,7 @@
     body.className = "book-body";
     const chip = document.createElement("span");
     chip.className = "cat-chip";
-    chip.textContent = catLabel(book.category);
+    chip.textContent = (book.isNew ? "NEW · " : "") + catLabel(book.category);
     const h3 = document.createElement("h3");
     h3.className = "book-title";
     h3.textContent = book.title;
