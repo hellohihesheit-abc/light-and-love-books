@@ -237,8 +237,20 @@
     const modal = $("#book-modal");
     if (!book || !modal) return;
     modalAsin = asin;
-    $("#modal-cover").src = book.cover;
-    $("#modal-cover").alt = `Cover of ${book.title} by Light & Love (MW)`;
+    const slot = $("#modal-cover-slot");
+    if (slot && book.cover) {
+      let img = $("#modal-cover");
+      if (!img) {
+        img = document.createElement("img");
+        img.id = "modal-cover";
+        img.className = "modal-cover";
+        img.width = 1000;
+        img.height = 1000;
+        slot.appendChild(img);
+      }
+      img.src = book.cover;
+      img.alt = `Cover of ${book.title} by Light & Love (MW)`;
+    }
     $("#modal-title").textContent = book.title;
     $("#modal-blurb").textContent = blurbFor(book);
     $("#modal-chip").textContent = catLabel(book.category);
@@ -284,6 +296,8 @@
     modal.hidden = true;
     document.body.classList.remove("modal-open");
     modalAsin = null;
+    const img = $("#modal-cover");
+    if (img) img.remove();
   }
 
   async function loadData() {
