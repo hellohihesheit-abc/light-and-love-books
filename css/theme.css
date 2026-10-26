@@ -140,3 +140,58 @@ body{font-size:1.0625rem}
 .album-card img{width:100%;height:auto;border-radius:12px}
 .album-card h3{font-family:"Cormorant Garamond",serif;margin:.6rem 0 .2rem}
 .albums-title{text-align:center;font-family:"Cormorant Garamond",serif;margin-top:2rem}
+
+/* Hero heading keeps the brand large; the searched phrase sits on a second line */
+.hero h1{
+  font-size:inherit;
+  font-weight:600;
+  line-height:1.15;
+  margin:0 0 .75rem;
+  background:none;
+  color:#5a3a40;
+  -webkit-text-fill-color:currentColor;
+}
+.hero-brand{
+  display:block;
+  font-size:clamp(2.3rem,5vw,3.4rem);
+  font-weight:600;
+  line-height:1.1;
+  letter-spacing:-.01em;
+  background:linear-gradient(120deg,#9c5463,#c98a93 45%,#b8914a);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+}
+.hero-kicker{
+  display:block;
+  max-width:22em;
+  margin:.4rem auto 0;
+  font-family:var(--serif);
+  font-size:clamp(1.15rem,2.4vw,1.45rem);
+  font-weight:600;
+  line-height:1.3;
+  color:#5a3a40;
+  -webkit-text-fill-color:#5a3a40;
+}
+.prompts-note{margin:.35rem 0 0}
+.prompts-note a{color:var(--rose-deep);font-weight:600}
+#modal-cover-slot{display:flex;justify-content:center}
+.page-main{padding:2.5rem 0 4rem}
+.page-main h1{font-size:clamp(2rem,4vw,2.8rem);color:#5a3a40;line-height:1.15;margin:0 0 .75rem}
+.prose{max-width:42rem;margin-inline:auto}
+.prose p,.prose li{color:#5c4548}
+.prose a:not(.journal-pick):not(.btn){color:#8e4b59;text-underline-offset:.15em}
+.prose h2{margin:2rem 0 .6rem;font-size:clamp(1.45rem,2.5vw,1.8rem);color:#5a3a40}
+.prose ol{padding-left:1.25rem}
+.prose li{margin:.4rem 0}
+.journal-picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1rem 0 1.5rem}
+.journal-pick{display:flex;gap:.75rem;align-items:center;text-decoration:none;color:inherit;background:rgba(255,250,246,.9);border:1px solid rgba(201,160,90,.35);border-radius:16px;padding:.65rem;text-align:left}
+.journal-pick img{width:72px;height:72px;object-fit:cover;border-radius:8px;flex:none}
+.journal-pick-copy{min-width:0}
+.journal-pick strong{display:block;font-family:var(--serif);font-size:1.05rem;line-height:1.25;color:#3a2a2c}
+.journal-pick-copy > span{display:block;font-size:.88rem;color:#6a5256;margin-top:.15rem}
+@media (max-width:640px){
+  .hero-brand{font-size:2.2rem}
+  .hero-kicker{font-size:1.05rem}
+}
