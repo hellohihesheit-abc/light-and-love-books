@@ -112,18 +112,26 @@ for b in books:
     if len(desc) < 120:
         desc += ' Bible verses, peace and encouragement.'
     desc = clip_desc(desc, 160)
+    # This site does not sell the book. Point at the Amazon listings with sameAs
+    # and do not add an Offer, price, rating, or return policy.
+    same = []
+    for v in links.values():
+        if isinstance(v, str) and b['asin'] in v and v not in same:
+            same.append(v)
+    if not same and isinstance(main, str):
+        same.append(main)
     ld = {
         '@context': 'https://schema.org',
         '@type': 'Book',
         'name': b['title'],
         'url': url,
+        'sameAs': same,
         'image': BASE + b['cover'],
         'author': {'@type': 'Person', 'name': 'Light & Love (MW)', 'url': BASE},
         'description': b.get('description', ''),
         'inLanguage': b.get('language', 'English'),
         'bookFormat': 'https://schema.org/' + ('Paperback' if b.get('format') == 'Paperback' else 'EBook'),
         'datePublished': b.get('publicationDateISO', ''),
-        'offers': {'@type': 'Offer', 'url': main, 'availability': 'https://schema.org/InStock'},
     }
     if b.get('isbn'):
         ld['isbn'] = b['isbn']
