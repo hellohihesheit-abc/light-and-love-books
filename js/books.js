@@ -48,8 +48,16 @@
     return book.blurb[lang] || book.blurb.en || "";
   }
 
+  /* Storage can throw (cookies/site data blocked, private mode); never let it stop the catalogue */
+  function readSaved() {
+    try { return window.localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
+  function writeSaved(value) {
+    try { window.localStorage.setItem(STORAGE_KEY, value); } catch (e) { /* ignore */ }
+  }
+
   function detectLang() {
-    const saved = localStorage.getItem(STORAGE_KEY);
+    const saved = readSaved();
     if (saved && I18N.strings[saved]) return saved;
     const nav = (navigator.language || "en").toLowerCase();
     if (nav.startsWith("zh-tw") || nav.startsWith("zh-hk") || nav.includes("hant")) return "zh-Hant";
@@ -62,7 +70,7 @@
   function setLang(next) {
     if (!I18N.strings[next]) next = "en";
     lang = next;
-    localStorage.setItem(STORAGE_KEY, lang);
+    writeSaved(lang);
     document.documentElement.lang = lang === "zh-Hant" ? "zh-Hant" : lang === "zh-Hans" ? "zh-Hans" : lang;
     applyChrome();
     renderFilters();
